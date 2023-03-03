@@ -65,8 +65,8 @@ namespace strutture
         {
 
         }
-    
-        private int Ricerca(prodotto [] p, String elemento, int dim )
+
+        public int Ricerca(prodotto[] p, String elemento, int dim)
         {
             int ritorno = -1;    
             for (int i = 0; i < dim; i++)
@@ -82,11 +82,15 @@ namespace strutture
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        //funzione eleminazione
+        public void button1_Click(object sender, EventArgs e)
         {
-            if (Ricerca(p, elemento, dim) != -1)
+            if (Ricerca(p, String elemento, dim) != -1)
             {
-                
+                for (int i = 0; i < dim; i++)
+                {
+                    
+                }
                 MessageBox.Show("Elemento eliminato");
             }
             else
