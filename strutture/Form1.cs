@@ -66,15 +66,20 @@ namespace strutture
 
         }
     
-        private void Ricerca(prodotto [] p)
+        private void Ricerca(prodotto [] p, String elemnto, int dim )
         {
+            int ritorno = -1;    
             for (int i = 0; i < dim; i++)
             {
-                if (textBox1 == p[i])
+                if (textBox1.Text == elemnto)
                 {
-                   
+                    ritorno = 1;
+                    break;
                 }
+
+                return ritorno; 
             }
+
         }
 
         private void button1_Click(object sender, EventArgs e)
