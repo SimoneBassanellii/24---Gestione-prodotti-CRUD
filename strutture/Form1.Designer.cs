@@ -35,7 +35,7 @@
             this.salva = new System.Windows.Forms.Button();
             this.listView1 = new System.Windows.Forms.ListView();
             this.label3 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.eliminazione = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -58,6 +58,7 @@
             this.nome.Name = "nome";
             this.nome.Size = new System.Drawing.Size(100, 20);
             this.nome.TabIndex = 0;
+            this.nome.TextChanged += new System.EventHandler(this.nome_TextChanged);
             // 
             // prezzo
             // 
@@ -65,6 +66,7 @@
             this.prezzo.Name = "prezzo";
             this.prezzo.Size = new System.Drawing.Size(100, 20);
             this.prezzo.TabIndex = 1;
+            this.prezzo.TextChanged += new System.EventHandler(this.prezzo_TextChanged);
             // 
             // label1
             // 
@@ -114,14 +116,15 @@
             this.label3.TabIndex = 6;
             this.label3.Text = "C.R.U.D";
             // 
-            // button1
+            // eliminazione
             // 
-            this.button1.Location = new System.Drawing.Point(253, 126);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 7;
-            this.button1.Text = "Elimina";
-            this.button1.UseVisualStyleBackColor = true;
+            this.eliminazione.Location = new System.Drawing.Point(253, 126);
+            this.eliminazione.Name = "eliminazione";
+            this.eliminazione.Size = new System.Drawing.Size(75, 23);
+            this.eliminazione.TabIndex = 7;
+            this.eliminazione.Text = "Elimina";
+            this.eliminazione.UseVisualStyleBackColor = true;
+            this.eliminazione.Click += new System.EventHandler(this.button1_Click);
             // 
             // textBox1
             // 
@@ -129,6 +132,7 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(100, 20);
             this.textBox1.TabIndex = 8;
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // label4
             // 
@@ -260,7 +264,7 @@
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.eliminazione);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.listView1);
             this.Controls.Add(this.salva);
@@ -285,7 +289,7 @@
         private System.Windows.Forms.Button salva;
         private System.Windows.Forms.ListView listView1;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button eliminazione;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;

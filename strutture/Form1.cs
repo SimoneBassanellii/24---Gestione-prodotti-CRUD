@@ -21,7 +21,7 @@ namespace strutture
         public Form1()
         {
             InitializeComponent();
-            p=new prodotto[100];
+            p = new prodotto[100];
             dim = 0;
         }
 
@@ -62,6 +62,37 @@ namespace strutture
         }
 
         private void label7_Click(object sender, EventArgs e)
+        {
+
+        }
+    
+        private void Ricerca(prodotto [] p)
+        {
+            for (int i = 0; i < dim; i++)
+            {
+                if (textBox1 == p[i])
+                {
+                   
+                }
+            }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void nome_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void prezzo_TextChanged(object sender, EventArgs e)
         {
 
         }
