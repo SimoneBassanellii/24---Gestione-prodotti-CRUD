@@ -66,12 +66,12 @@ namespace strutture
 
         }
     
-        private void Ricerca(prodotto [] p, String elemnto, int dim )
+        private int Ricerca(prodotto [] p, String elemento, int dim )
         {
             int ritorno = -1;    
             for (int i = 0; i < dim; i++)
             {
-                if (textBox1.Text == elemnto)
+                if (textBox1.Text == elemento)
                 {
                     ritorno = 1;
                     break;
@@ -84,7 +84,17 @@ namespace strutture
 
         private void button1_Click(object sender, EventArgs e)
         {
-            
+            if (Ricerca(p, elemento, dim) != -1)
+            {
+                
+                MessageBox.Show("Elemento eliminato");
+            }
+            else
+            {
+                MessageBox.Show("Elemento non presente");
+            }
+
+            visualizza(p);
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
