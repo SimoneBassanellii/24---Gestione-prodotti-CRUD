@@ -83,7 +83,7 @@ namespace strutture
         //funzione eleminazione
         public void button1_Click(object sender, EventArgs e)
         {
-            if (Ricerca(p, ref  ) != -1)
+            if (Ricerca(p, ref ) != -1)
             {
                 for (int i = 0; i < dim; i++)
                 {
@@ -110,6 +110,11 @@ namespace strutture
         }
 
         private void prezzo_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox5_TextChanged(object sender, EventArgs e)
         {
 
         }
