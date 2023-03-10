@@ -54,7 +54,7 @@
             // 
             // prezzo
             // 
-            this.prezzo.Location = new System.Drawing.Point(136, 70);
+            this.prezzo.Location = new System.Drawing.Point(129, 70);
             this.prezzo.Name = "prezzo";
             this.prezzo.Size = new System.Drawing.Size(100, 20);
             this.prezzo.TabIndex = 1;
@@ -73,7 +73,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(133, 52);
+            this.label2.Location = new System.Drawing.Point(130, 54);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(39, 13);
             this.label2.TabIndex = 3;
@@ -129,11 +129,12 @@
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(9, 145);
+            this.label11.Location = new System.Drawing.Point(12, 145);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(35, 13);
             this.label11.TabIndex = 20;
             this.label11.Text = "Nome";
+            this.label11.Click += new System.EventHandler(this.label11_Click);
             // 
             // label12
             // 

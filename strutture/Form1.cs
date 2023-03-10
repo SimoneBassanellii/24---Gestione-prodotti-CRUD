@@ -45,7 +45,7 @@ namespace strutture
         }
         public string prodString(prodotto p)
         {
-            return "Nome: "+ p.nome+ "prezzo: "+ p.prezzo+"€".ToString();
+            return "Nome: "+ p.nome + "" + "prezzo: "+ p.prezzo+"€".ToString();
         }
         public void visualizza(prodotto[] pp)
         {
@@ -71,7 +71,7 @@ namespace strutture
             int ritorno = -1;    
             for (int i = 0; i < dim; i++)
             {
-                if (textBox1.Text == elemento)
+                if (p[i].nome == elemento)
                 {
                     ritorno = 1;
                     break;
@@ -80,23 +80,24 @@ namespace strutture
             return ritorno;
         }
 
+        public int Eliminazione(prodotto[] p, ref int dim, String elemento)
+        {
+            int eliminato = -1;
+            int b = Ricerca(p, textBox1.Text,dim);
+            for(int i=b; i<dim-1; i++)
+            {
+                p[i] = p[i + 1];
+            }
+            dim--;
+            visualizza(p);
+            return eliminato;
+            
+        }
+
         //funzione eleminazione
         public void button1_Click(object sender, EventArgs e)
         {
-            if (Ricerca(p, ref ) != -1)
-            {
-                for (int i = 0; i < dim; i++)
-                {
-                    
-                }
-                MessageBox.Show("Elemento eliminato");
-            }
-            else
-            {
-                MessageBox.Show("Elemento non presente");
-            }
-
-            visualizza(p);
+            Eliminazione(p,dim);
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
@@ -115,6 +116,11 @@ namespace strutture
         }
 
         private void textBox5_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label11_Click(object sender, EventArgs e)
         {
 
         }
