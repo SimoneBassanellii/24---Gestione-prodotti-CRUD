@@ -75,17 +75,15 @@ namespace strutture
                 {
                     ritorno = 1;
                     break;
-                }
-
-                return ritorno; 
+                }            
             }
-
+            return ritorno;
         }
 
         //funzione eleminazione
         public void button1_Click(object sender, EventArgs e)
         {
-            if (Ricerca(p, String elemento, dim) != -1)
+            if (Ricerca(p, ref  ) != -1)
             {
                 for (int i = 0; i < dim; i++)
                 {
